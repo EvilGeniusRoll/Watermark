@@ -1,0 +1,25 @@
+﻿<Window x:Class="Watermark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Watermark"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="736.6" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Name="tbPath" Height="33" Margin="10,10,0,0" VerticalContentAlignment="Bottom" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="687"/>
+        <Button Content="Выбрать" Name="bOpenFile" HorizontalAlignment="Left" Margin="702,10,0,0" VerticalAlignment="Top" Width="80" Height="33" RenderTransformOrigin="0,0.05" Click="BOpenFile_Click" />
+
+        <Slider HorizontalAlignment="Left" Minimum="0" Maximum="100" IsDirectionReversed="True" Name="SliderY" Height="543" Margin="10,76,0,0" VerticalAlignment="Top" Width="17" Orientation="Vertical" ValueChanged="SliderY_OnValueChanged"/>
+        <Slider HorizontalAlignment="Left" Value="1" Minimum="0" Maximum="1" Name="SliderO" Height="543" Margin="765,76,0,0" VerticalAlignment="Top" Width="17" Orientation="Vertical" ValueChanged="SliderO_OnValueChanged" />
+        <Slider HorizontalAlignment="Center" Minimum="0" Maximum="100" Name="SliderX"  Margin="86,624,74,0" VerticalAlignment="Top" Width="632" ValueChanged="SliderX_OnValueChanged"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Height="33" Margin="601,647,0,0" VerticalAlignment="Top" Width="181" Name="Save" Click="Save_Click"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.579,0.346"/>
+        <Label Content="S" HorizontalAlignment="Left" Margin="64,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.579,0.346"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="63,616,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.579,0.346"/>
+        <Label Content="O" HorizontalAlignment="Left" Margin="765,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.579,0.346"/>
+        <Image HorizontalAlignment="Left" UseLayoutRounding="True" SnapsToDevicePixels="True" Width="632" Height="543" Stretch="Fill"  Margin="86,76,0,0" VerticalAlignment="Top"  Name="Image"/>
+        <Slider HorizontalAlignment="Left" Value="10" IsSnapToTickEnabled="True" TickFrequency="1"  Minimum="1" Maximum="20" Margin="86,48,0,0" RenderTransformOrigin="-13.083,-0.167" Width="632" Name="SliderS" ValueChanged="SliderS_OnValueChanged" Height="18" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
